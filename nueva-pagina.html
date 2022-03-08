@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Adopción de perros</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Menú<br></b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Casa</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Perros en adopción</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Información</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacta con nosotros</a> 
+    
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Menú</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Adopción de perros</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Perros rescatados.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="imagenes/perro1.jpg" style="width:100%" onclick="onClick(this)" >
+      <img src="imagenes/perro5.jpg" style="width:100%" onclick="onClick(this)" >
+      <img src="imagenes/perro4.jpg" style="width:85%" onclick="onClick(this)" alt="White walls with designer chairs">
+    </div>
+
+    <div class="w3-half">
+      <img src="imagenes/perro2.jpg" style="width:70%" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="imagenes/perro6.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+      <img src="imagenes/perro8.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Información.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Vamos a introduciros un poco sobre lo que hacemos</p>
+    <p>Nuestra labor es rescatar a perros abandonados de la calle y rescatralos para que tengan una nueva vida. Lo primero que hacemos es llevarles a un veterinario en caso de que tengan alguna lesión, quemadura etc. Cuando están listos y en proceso de recuperación los ponemos en adopción y se quedan en la perrera hasta que alguien los adopte. Si alguien quiere adoptar algunos de nuestros perros, hay que contactar con las siguientes personas: 
+    </p>
+  </div>
+  
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contacta con nosotros.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>The best team in the world.</p>
+    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <p><b>Our designers are thoughtfully chosen</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="imagenes/chica1.jpg" alt="Marta" style="width:85%">
+        <div class="w3-container">
+          <h3>Marta Sánchez</h3>
+          <p class="w3-opacity"></p>
+          <p>Teléfono: 685 775 653
+		     Correo: martasanchezm"gmail.com.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="imagenes/chico.jpg" alt="Roberto" style="width:100%">
+        <div class="w3-container">
+          <h3>Roberto Hernández</h3>
+          <p class="w3-opacity"></p>
+          <p>Teléfono: 644 785 234
+		     Correo: robertoher@gmail.com.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="imagenes/chica2.jpg" alt="Nayara" style="width:100%">
+        <div class="w3-container">
+          <h3>Nayara Martínez</h3>
+          <p class="w3-opacity"></p>
+          <p>Teléfono:670 547 823
+		     Correo: nayaramartniezc@gmail.com.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  
+</script>
+
+</body>
+</html>
